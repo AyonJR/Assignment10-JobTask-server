@@ -28,12 +28,24 @@ async function run() {
 
 
     // getting al the products
-    app.get('/allProducts', async(req,res)=>{
-        const result = await productCollection.find().toArray()
-        res.send(result)
-    })
-
+    app.get('/allProducts', async (req, res) => {
+        const page = parseInt(req.query.page) || 1; // Get the current page from the query, default to 1
+        const limit = parseInt(req.query.limit) || 10; // Set the number of products per page, default to 10
     
+        const skip = (page - 1) * limit; // Calculate the number of documents to skip
+    
+        const totalProducts = await productCollection.countDocuments(); // Get the total number of products
+        const products = await productCollection.find().skip(skip).limit(limit).toArray(); // Fetch the products
+    
+        res.send({
+            totalProducts,
+            products,
+            totalPages: Math.ceil(totalProducts / limit),
+            currentPage: page,
+        });
+    });
+    
+
 
    
 
