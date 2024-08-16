@@ -1,4 +1,4 @@
-# GRIPPABLE - Backend
+# GRIPPABLE 
 
 ## Project Setup
 
@@ -18,4 +18,3 @@ Before you begin, ensure you have the following installed on your local machine:
 
    ```bash
    git clone https://github.com/yourusername/grippable-backend.git
-   cd grippable-backend
