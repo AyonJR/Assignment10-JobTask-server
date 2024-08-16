@@ -39,26 +39,7 @@ async function run() {
           limit = 10,
         } = req.query;
 
-        // Build query
-        let query = {};
-        if (searchTerm) {
-          query.name = { $regex: searchTerm, $options: 'i' };
-        }
-        if (brand) {
-          query.brand = brand;
-        }
-        if (category) {
-          query.category = category;
-        }
-        if (priceRange) {
-          if (priceRange === 'low') {
-            query.price = { $lt: 50 };
-          } else if (priceRange === 'medium') {
-            query.price = { $gte: 50, $lte: 100 };
-          } else if (priceRange === 'high') {
-            query.price = { $gt: 100 };
-          }
-        }
+       
 
         // Sort options
         let sortOptions = {};
