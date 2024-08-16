@@ -60,7 +60,15 @@ async function run() {
           }
         }
 
-      
+        // Sort options
+        let sortOptions = {};
+        if (sort === 'priceLowToHigh') {
+          sortOptions.price = 1;
+        } else if (sort === 'priceHighToLow') {
+          sortOptions.price = -1;
+        } else if (sort === 'newest') {
+          sortOptions.dateAdded = -1;
+        }
 
         // Pagination
         const pageNumber = parseInt(page, 10);
