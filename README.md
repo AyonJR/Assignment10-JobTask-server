@@ -1,5 +1,9 @@
 # GRIPPABLE 
 
+## Live Link
+
+- [https://job-task-dd5c5.web.app]
+
 ## Description
 
 GRIPPABLE is a user-friendly web platform designed to streamline the management and browsing of products. It offers features like advanced search, filtering, sorting, and easy navigation, providing users with a seamless experience in exploring and managing product listings. The application combines a sleek frontend built with React.js and a robust backend powered by Node.js, Express.js, and MongoDB.
@@ -38,3 +42,7 @@ Before you begin, ensure you have the following installed on your local machine:
 3. **Set up environment variables:**
 
 4. **Start the development server:**
+
+### Client-side repository
+
+- https://github.com/AyonJR/Assignment10-JobTask
