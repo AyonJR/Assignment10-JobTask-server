@@ -1,5 +1,9 @@
 # GRIPPABLE 
 
+## Description
+
+GRIPPABLE is a user-friendly web platform designed to streamline the management and browsing of products. It offers features like advanced search, filtering, sorting, and easy navigation, providing users with a seamless experience in exploring and managing product listings. The application combines a sleek frontend built with React.js and a robust backend powered by Node.js, Express.js, and MongoDB.
+
 ## Project Setup
 
 This repository contains the backend of the GRIPPABLE web application. The backend is built using Node.js with Express.js and MongoDB as the database.
