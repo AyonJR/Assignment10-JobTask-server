@@ -26,7 +26,18 @@ async function run() {
 
     const productCollection = client.db('JobTask').collection('products');
 
-    
+    // Get all products with filtering, sorting, and pagination
+    app.get('/allProducts', async (req, res) => {
+      try {
+        const {
+          searchTerm = '',
+          brand = '',
+          category = '',
+          priceRange = '',
+          sort = '',
+          page = 1,
+          limit = 10,
+        } = req.query;
 
         // Build query
         let query = {};
